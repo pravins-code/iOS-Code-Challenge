@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		343A743324A75DC100CA6CF2 /* DataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343A743224A75DC100CA6CF2 /* DataItem.swift */; };
+		343A743B24A770D600CA6CF2 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343A743A24A770D600CA6CF2 /* ViewModel.swift */; };
+		343A743E24A7713200CA6CF2 /* CCNetworkDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343A743D24A7713200CA6CF2 /* CCNetworkDataManager.swift */; };
 		348DFFCB24A7487900D0231E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348DFFCA24A7487900D0231E /* AppDelegate.swift */; };
 		348DFFD524A7487900D0231E /* CodeChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 348DFFD324A7487900D0231E /* CodeChallenge.xcdatamodeld */; };
 		348DFFD724A7487E00D0231E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 348DFFD624A7487E00D0231E /* Assets.xcassets */; };
@@ -17,6 +19,8 @@
 
 /* Begin PBXFileReference section */
 		343A743224A75DC100CA6CF2 /* DataItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataItem.swift; sourceTree = "<group>"; };
+		343A743A24A770D600CA6CF2 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		343A743D24A7713200CA6CF2 /* CCNetworkDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCNetworkDataManager.swift; sourceTree = "<group>"; };
 		348DFFC724A7487900D0231E /* CodeChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		348DFFCA24A7487900D0231E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		348DFFD424A7487900D0231E /* CodeChallenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CodeChallenge.xcdatamodel; sourceTree = "<group>"; };
@@ -48,8 +52,17 @@
 		343A743624A7620000CA6CF2 /* ModelView */ = {
 			isa = PBXGroup;
 			children = (
+				343A743A24A770D600CA6CF2 /* ViewModel.swift */,
 			);
 			path = ModelView;
+			sourceTree = "<group>";
+		};
+		343A743C24A7711700CA6CF2 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				343A743D24A7713200CA6CF2 /* CCNetworkDataManager.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		348DFFBE24A7487900D0231E = {
@@ -71,6 +84,7 @@
 		348DFFC924A7487900D0231E /* CodeChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				343A743C24A7711700CA6CF2 /* Utilities */,
 				343A743624A7620000CA6CF2 /* ModelView */,
 				343A743124A75D7900CA6CF2 /* Model */,
 				348DFFCA24A7487900D0231E /* AppDelegate.swift */,
@@ -153,7 +167,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				343A743B24A770D600CA6CF2 /* ViewModel.swift in Sources */,
 				343A743324A75DC100CA6CF2 /* DataItem.swift in Sources */,
+				343A743E24A7713200CA6CF2 /* CCNetworkDataManager.swift in Sources */,
 				348DFFD524A7487900D0231E /* CodeChallenge.xcdatamodeld in Sources */,
 				348DFFCB24A7487900D0231E /* AppDelegate.swift in Sources */,
 				348DFFE224A74A7500D0231E /* HomeScreenViewController.swift in Sources */,

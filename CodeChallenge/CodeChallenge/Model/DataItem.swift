@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Country: Decodable {
+struct DataItem: Codable {
     
     let id: String?
     let type: String?
