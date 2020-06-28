@@ -16,8 +16,8 @@ class HomeScreenViewController: UITableViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        //        self.tableView.register(CountryInfoTableViewCell.self)
-        
+        self.tableView.register(DataItemTableViewCell.self)
+
         mainViewModelObj = MainViewModel()
         if let mainViewModel = mainViewModelObj {
             mainViewModel.readDataCompleted = { (success, error) in
@@ -54,10 +54,12 @@ class HomeScreenViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        if let dataItem = mainViewModelObj?.dataItemList![indexPath.row] {
-            cell.textLabel?.text = dataItem.date
+        let cell = tableView.dequeueReusableCell(type: DataItemTableViewCell.self, for: indexPath)
+
+        if let dataInfo = mainViewModelObj?.dataItemList![indexPath.row] {
+            cell.dataValue = dataInfo
         }
+        
         return cell
     }
     
