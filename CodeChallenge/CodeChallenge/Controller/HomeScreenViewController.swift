@@ -11,7 +11,7 @@ import UIKit
 class HomeScreenViewController: UITableViewController {
     
     private var mainViewModelObj: MainViewModel?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,6 +35,9 @@ class HomeScreenViewController: UITableViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
     
     /*
      // MARK: - Navigation

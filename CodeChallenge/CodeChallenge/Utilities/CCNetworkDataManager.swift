@@ -16,7 +16,7 @@ protocol DataManageable {
 }
 
 class CCNetworkDataManager: DataManageable {
-   
+    
     /* reads data from a remote location */
     func readData(with url: String, completion completionBlock: @escaping DownloadDataComplete) -> Void {
         if let requestUrl = URL(string: url) {
@@ -48,10 +48,17 @@ class CCNetworkDataManager: DataManageable {
     func parseItemData(_ jsonData: Data) -> [DataItem]? {
         var item: [DataItem]? = nil
         do {
+            
+            guard let codingUserInfoKeyManagedObjectContext = CodingUserInfoKey.managedObjectContext else {
+                fatalError("Failed to retrieve context")
+            }
+            
             // Parse JSON data
+            let managedObjectContext = CCCoreDataStack.context
             let decoder = JSONDecoder()
-            let utfData = String(decoding: jsonData, as: UTF8.self).data(using: .utf8)!
-            let object = try decoder.decode([DataItem].self, from: utfData)
+            decoder.userInfo[codingUserInfoKeyManagedObjectContext] = managedObjectContext
+            let object = try decoder.decode([DataItem].self, from: jsonData)
+            try managedObjectContext.save()
             debugPrint(object)
             item = object
             return item

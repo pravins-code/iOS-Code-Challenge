@@ -11,19 +11,9 @@ import UIKit
 class DataItemTableViewCell: UITableViewCell {
 
     // MARK: - Properties Initializer
-    //Creates vertical stack view
-    lazy private var verticalStackView: UIStackView = {
-        let vsv = UIStackView(arrangedSubviews: [self.imageCellViewModel.idLabel, self.imageCellViewModel.dataLabel])
-        vsv.distribution  = .fill
-        vsv.axis          = .vertical
-        vsv.alignment     = .leading
-        vsv.spacing       = 2
-        return vsv
-    }()
-    
     //Creates horizontal stack view
     lazy private var horizontalStackView: UIStackView = {
-        let hsv = UIStackView(arrangedSubviews: [self.imageCellViewModel.imageView, verticalStackView])
+        let hsv = UIStackView(arrangedSubviews: [self.imageCellViewModel.imageView, self.imageCellViewModel.dataLabel])
         hsv.distribution    = .fill
         hsv.axis            = .horizontal
         hsv.alignment       = .center
@@ -59,6 +49,7 @@ class DataItemTableViewCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         self.imageCellViewModel.resetUIViewData()
+        layoutIfNeeded()
     }
     
     // MARK: - setup layout contraints
@@ -76,8 +67,8 @@ class DataItemTableViewCell: UITableViewCell {
         
         let aspectConstraint = NSLayoutConstraint(item: self.imageCellViewModel.imageView, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self.imageCellViewModel.imageView, attribute: NSLayoutConstraint.Attribute.height, multiplier: 1, constant: 1)
         self.imageCellViewModel.imageView.addConstraint(aspectConstraint)
-        self.imageCellViewModel.imageView.widthAnchor.constraint(equalToConstant: 60).isActive = true
-        self.imageCellViewModel.imageView.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        self.imageCellViewModel.imageView.widthAnchor.constraint(equalToConstant: 300).isActive = true
+        self.imageCellViewModel.imageView.heightAnchor.constraint(equalToConstant: 200).isActive = true
         layoutSubviews()
         layoutIfNeeded()
     }
