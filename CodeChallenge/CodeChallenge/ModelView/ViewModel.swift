@@ -96,7 +96,7 @@ class MainViewModel {
     
     
     deinit {
-        
+        NotificationCenter.default.removeObserver(self)
     }
     
     func sortData() {
