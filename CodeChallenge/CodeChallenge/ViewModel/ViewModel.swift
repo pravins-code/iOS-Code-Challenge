@@ -50,7 +50,7 @@ class CCMainViewModel {
             networkDataManager.readData(with: url, completion: { [unowned self] (data, error) in
                 if (data != nil) {
                     if let dataList = self.networkDataManager.parseItemData(data!) {
-                        self.dataItemList = dataList
+                        self.dataItemList = self.sortList(list: dataList)
                     }
                 }
                 if let loadCompletionBlock = self.readDataCompleted {
@@ -72,9 +72,9 @@ class CCMainViewModel {
         let _ : NSError! = nil
         do {
             let fetchedResults = try managedContext.fetch(fetchRequest)
-            dataItemList = fetchedResults
+            self.dataItemList = self.sortList(list: fetchedResults)
             //            print(dataItemList!)
-            return (dataItemList!.count > 0)
+            return (self.dataItemList!.count > 0)
         } catch let error {
             print("Fetching error : \(error)")
             return false
@@ -102,7 +102,9 @@ class CCMainViewModel {
         NotificationCenter.default.removeObserver(self)
     }
     
-    func sortData() {
-        
+    func sortList(list: [DataItem]) -> [DataItem] {
+        let sortedArray = list.sorted { $0.dateConverted < $1.dateConverted }
+        print(sortedArray)
+        return sortedArray
     }
 }

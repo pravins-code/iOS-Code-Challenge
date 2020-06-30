@@ -43,6 +43,21 @@ class DataItem: NSManagedObject, Codable {
     }
 }
 
+extension DataItem {
+    var dateConverted: Date {
+        if let date = self.date {
+            return dateFormatter.date(from: date) ?? Date() // can't be converted to any date, assuming that refers to current date.
+        } else {
+            return Date()
+        }
+    }
+    private var dateFormatter: DateFormatter {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        return dateFormatter
+    }
+}
+
 // MARK: - Extends the CodingUserInfoKey
 public extension CodingUserInfoKey {
     // Helper property to retrieve the context
