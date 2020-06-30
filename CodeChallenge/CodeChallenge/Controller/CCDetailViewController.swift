@@ -51,12 +51,7 @@ class CCDetailViewController: UIViewController {
 
         // Horizontal Stack view constraint
         horizontalStackView.translatesAutoresizingMaskIntoConstraints = false
-//        NSLayoutConstraint.activate([
-//            testView.widthAnchor.constraint(equalToConstant: 64),
-//            testView.widthAnchor.constraint(equalTo: testView.heightAnchor),
-//            testView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-//            testView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
-//        ])
+
         NSLayoutConstraint.activate([
             horizontalStackView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
             horizontalStackView.topAnchor.constraint(equalTo: self.view.topAnchor),
