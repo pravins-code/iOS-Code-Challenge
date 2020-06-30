@@ -11,7 +11,7 @@ import XCTest
 
 class MainViewModelTests: XCTestCase {
     
-    let mainViewModelObj = MainViewModel()
+    let mainViewModelObj = CCMainViewModel()
 
     override func setUp() {
         mainViewModelObj.loadData()
@@ -21,17 +21,20 @@ class MainViewModelTests: XCTestCase {
     }
 
     func testModelObjectLoadingSuccess() {
+        let expectation = self.expectation(description: "Failed reading data")
         mainViewModelObj.readDataCompleted = { (success, error) in
             XCTAssertTrue(success)
+            expectation.fulfill()
         }
+        waitForExpectations(timeout: 5, handler: nil)
     }
     
     func testLoadedDataCount() {
-        mainViewModelObj.readDataCompleted = { (success, error) in
+        mainViewModelObj.readDataCompleted = { [weak self] (success, error) in
             XCTAssertTrue(success)
+            XCTAssertNotNil(self!.mainViewModelObj.dataItemList)
+            XCTAssertEqual(self!.mainViewModelObj.dataItemList?.count, 34)
         }
-        XCTAssertNotNil(mainViewModelObj.dataItemList)
-        XCTAssertEqual(mainViewModelObj.dataItemList?.count, 34)
     }
 
     func testPerformanceExample() {
@@ -40,7 +43,6 @@ class MainViewModelTests: XCTestCase {
             mainViewModelObj.loadData()
             // Put the code you want to measure the time of here.
             mainViewModelObj.readDataCompleted = { (success, error) in
-                
             }
         }
     }

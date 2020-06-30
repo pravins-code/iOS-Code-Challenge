@@ -14,10 +14,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // Add Programmatically a Window and set a NavigationController with UIViewController
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        let mainViewController = HomeScreenViewController()
+        let mainViewController = CCHomeScreenViewController()
         let navigationController = UINavigationController(rootViewController: mainViewController)
         navigationController.navigationBar.tintColor = .green
         navigationController.navigationBar.backgroundColor = .green
@@ -31,7 +32,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: AppDelegate Lifecycle
 
-    
     func applicationWillEnterForeground(_ application: UIApplication) {
         
     }

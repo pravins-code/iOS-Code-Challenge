@@ -22,6 +22,7 @@ class NetworkDataManagerTests: XCTestCase {
     }
     
     func testErrorReadingData() {
+        let expectation = self.expectation(description: "Error Reading Data")
         let url = "https://raw.githubusercontent.com/AxxessTech/Mobile-Projects/master/challenge.json "
 
         if let networkManager = self.networkDataManager {
@@ -29,27 +30,31 @@ class NetworkDataManagerTests: XCTestCase {
                 if data != nil {
                     
                 } else {
+                    expectation.fulfill()
                     XCTAssertNil(data)
                 }
             })
         }
+        waitForExpectations(timeout: 5, handler: nil)
     }
 
     func testNetworkServiceResponse() {
+        let expectation = self.expectation(description: "Error recieving response")
+
         let url = "https://raw.githubusercontent.com/AxxessTech/Mobile-Projects/master/challenge.json"
 
         if let networkManager = self.networkDataManager {
             networkManager.readData(with: url, completion: { data, error  in
                 XCTAssertNotNil(data)
+                expectation.fulfill()
             })
         }
-    }
-    
-    func testParseData() {
-        
+        waitForExpectations(timeout: 5, handler: nil)
     }
     
     func testResponseDataParsing() {
+        let expectation = self.expectation(description: "Error parsing response")
+
         let url = "https://raw.githubusercontent.com/AxxessTech/Mobile-Projects/master/challenge.json"
 
         if let networkManager = self.networkDataManager {
@@ -58,10 +63,12 @@ class NetworkDataManagerTests: XCTestCase {
                     if let dataList = self.networkDataManager!.parseItemData(data!) {
                         XCTAssertNotNil(dataList)
                         XCTAssertEqual(dataList.count, 34)
+                        expectation.fulfill()
                     }
                 }
             })
         }
+        waitForExpectations(timeout: 5, handler: nil)
     }
 
     func testPerformanceExample() {

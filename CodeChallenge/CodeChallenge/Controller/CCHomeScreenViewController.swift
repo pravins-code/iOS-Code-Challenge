@@ -1,5 +1,5 @@
 //
-//  HomeScreenViewController.swift
+//  CCHomeScreenViewController.swift
 //  CodeChallenge
 //
 //  Created by Pravin Ghogare on 27/06/20.
@@ -8,17 +8,18 @@
 
 import UIKit
 
-class HomeScreenViewController: UITableViewController {
+class CCHomeScreenViewController: UITableViewController {
     
-    private var mainViewModelObj: MainViewModel?
+    // Instance variables
+    private var mainViewModelObj: CCMainViewModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        self.tableView.register(DataItemTableViewCell.self)
+        self.tableView.register(CCDataItemTableViewCell.self)
 
-        mainViewModelObj = MainViewModel()
+        mainViewModelObj = CCMainViewModel()
         if let mainViewModel = mainViewModelObj {
             mainViewModel.readDataCompleted = { (success, error) in
                 if success {
@@ -35,20 +36,6 @@ class HomeScreenViewController: UITableViewController {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        
-    }
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -57,7 +44,7 @@ class HomeScreenViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(type: DataItemTableViewCell.self, for: indexPath)
+        let cell = tableView.dequeueReusableCell(type: CCDataItemTableViewCell.self, for: indexPath)
 
         if let dataInfo = mainViewModelObj?.dataItemList![indexPath.row] {
             cell.dataValue = dataInfo
@@ -69,6 +56,16 @@ class HomeScreenViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailView = CCDetailViewController()
+        if let dataInfo = mainViewModelObj?.dataItemList![indexPath.row] {
+            detailView.dataValue = dataInfo
+        }
+        self.navigationController?.pushViewController(detailView, animated: true)
+    }
+    
+    // MARK: - AlertView
     
     func showAlert(_ error: NSError, title: String, message: String, buttonTitle: String) {
         var errorDetail: String? = nil

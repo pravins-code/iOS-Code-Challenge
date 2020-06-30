@@ -8,6 +8,7 @@
 
 import Foundation
 
+// MARK: - Download Data completion handler
 typealias DownloadDataComplete = ((Data?, Error?) -> Void)
 
 // MARK: - Data handler method, implement this protocol for local/mock Data and remote data

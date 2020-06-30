@@ -9,6 +9,8 @@
 import Foundation
 import CoreData
 
+// MARK: - Singleton class to handle Core Data functionality
+
 class CCCoreDataStack {
     // MARK: - Core Data stack
     private init() {}
@@ -37,14 +39,13 @@ class CCCoreDataStack {
                  * The store could not be migrated to the current model version.
                  Check the error message to determine what the actual problem was.
                  */
-                fatalError("Unresolved error \(error), \(error.userInfo)")
+                print("Unresolved error \(error), \(error.userInfo)")
             }
         })
         return container
     }()
     
     // MARK: - Core Data Saving support
-    
     static func saveContext () {
         let context = persistentContainer.viewContext
         if context.hasChanges {
@@ -54,7 +55,7 @@ class CCCoreDataStack {
                 // Replace this implementation with code to handle the error appropriately.
                 // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
                 let nserror = error as NSError
-                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+                print("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
     }

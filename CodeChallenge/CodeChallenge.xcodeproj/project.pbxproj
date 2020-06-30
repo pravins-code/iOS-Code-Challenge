@@ -13,17 +13,20 @@
 		343B0BD324A9BC3D00BFBDD6 /* CodeChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343B0BD224A9BC3D00BFBDD6 /* CodeChallengeTests.swift */; };
 		343B0BDB24A9BC6F00BFBDD6 /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343B0BDA24A9BC6F00BFBDD6 /* MainViewModelTests.swift */; };
 		343B0BDD24A9BED600BFBDD6 /* CCNetworkDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343B0BDC24A9BED600BFBDD6 /* CCNetworkDataManagerTests.swift */; };
-		3442055F24A8CB7A00CC7E0E /* DataItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3442055E24A8CB7A00CC7E0E /* DataItemTableViewCell.swift */; };
-		3442056124A8CC4E00CC7E0E /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3442056024A8CC4E00CC7E0E /* CellViewModel.swift */; };
+		343B6BCE24AB5A1500266137 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 343B6BCD24AB5A1500266137 /* Assets.xcassets */; };
+		343B6BD024AB606000266137 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343B6BCF24AB606000266137 /* Constants.swift */; };
+		343B6BD224AB620300266137 /* CCImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343B6BD124AB620300266137 /* CCImageManager.swift */; };
+		343F411924AB4FF400AB0021 /* CCDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343F411824AB4FF400AB0021 /* CCDetailViewController.swift */; };
+		3442055F24A8CB7A00CC7E0E /* CCDataItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3442055E24A8CB7A00CC7E0E /* CCDataItemTableViewCell.swift */; };
+		3442056124A8CC4E00CC7E0E /* CCCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3442056024A8CC4E00CC7E0E /* CCCellViewModel.swift */; };
 		3442056324A8CF3800CC7E0E /* CCUIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3442056224A8CF3800CC7E0E /* CCUIExtensions.swift */; };
 		3442056524A8D13100CC7E0E /* CCImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3442056424A8D13100CC7E0E /* CCImageDownloader.swift */; };
 		3442056724A8FEF900CC7E0E /* DataItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3442056624A8FEF900CC7E0E /* DataItem+CoreDataProperties.swift */; };
 		3442056924A9029A00CC7E0E /* CCCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3442056824A9029A00CC7E0E /* CCCoreDataStack.swift */; };
 		348DFFCB24A7487900D0231E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348DFFCA24A7487900D0231E /* AppDelegate.swift */; };
 		348DFFD524A7487900D0231E /* CodeChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 348DFFD324A7487900D0231E /* CodeChallenge.xcdatamodeld */; };
-		348DFFD724A7487E00D0231E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 348DFFD624A7487E00D0231E /* Assets.xcassets */; };
 		348DFFDA24A7487E00D0231E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 348DFFD824A7487E00D0231E /* LaunchScreen.storyboard */; };
-		348DFFE224A74A7500D0231E /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348DFFE124A74A7500D0231E /* HomeScreenViewController.swift */; };
+		348DFFE224A74A7500D0231E /* CCHomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348DFFE124A74A7500D0231E /* CCHomeScreenViewController.swift */; };
 		AA7AC9834AFF51190D336D45 /* Pods_CodeChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958C0D139036534AA80369F6 /* Pods_CodeChallenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,8 +50,12 @@
 		343B0BD424A9BC3D00BFBDD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		343B0BDA24A9BC6F00BFBDD6 /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
 		343B0BDC24A9BED600BFBDD6 /* CCNetworkDataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCNetworkDataManagerTests.swift; sourceTree = "<group>"; };
-		3442055E24A8CB7A00CC7E0E /* DataItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataItemTableViewCell.swift; sourceTree = "<group>"; };
-		3442056024A8CC4E00CC7E0E /* CellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
+		343B6BCD24AB5A1500266137 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		343B6BCF24AB606000266137 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		343B6BD124AB620300266137 /* CCImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCImageManager.swift; sourceTree = "<group>"; };
+		343F411824AB4FF400AB0021 /* CCDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCDetailViewController.swift; sourceTree = "<group>"; };
+		3442055E24A8CB7A00CC7E0E /* CCDataItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCDataItemTableViewCell.swift; sourceTree = "<group>"; };
+		3442056024A8CC4E00CC7E0E /* CCCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCCellViewModel.swift; sourceTree = "<group>"; };
 		3442056224A8CF3800CC7E0E /* CCUIExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCUIExtensions.swift; sourceTree = "<group>"; };
 		3442056424A8D13100CC7E0E /* CCImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCImageDownloader.swift; sourceTree = "<group>"; };
 		3442056624A8FEF900CC7E0E /* DataItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -56,10 +63,9 @@
 		348DFFC724A7487900D0231E /* CodeChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		348DFFCA24A7487900D0231E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		348DFFD424A7487900D0231E /* CodeChallenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CodeChallenge.xcdatamodel; sourceTree = "<group>"; };
-		348DFFD624A7487E00D0231E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		348DFFD924A7487E00D0231E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		348DFFDB24A7487E00D0231E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		348DFFE124A74A7500D0231E /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
+		348DFFE124A74A7500D0231E /* CCHomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCHomeScreenViewController.swift; sourceTree = "<group>"; };
 		93DFD867B02324B79CFDE299 /* Pods-CodeChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeChallenge.release.xcconfig"; path = "Target Support Files/Pods-CodeChallenge/Pods-CodeChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		958C0D139036534AA80369F6 /* Pods_CodeChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodeChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -100,13 +106,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		343A743624A7620000CA6CF2 /* ModelView */ = {
+		343A743624A7620000CA6CF2 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				343A743A24A770D600CA6CF2 /* ViewModel.swift */,
-				3442056024A8CC4E00CC7E0E /* CellViewModel.swift */,
+				3442056024A8CC4E00CC7E0E /* CCCellViewModel.swift */,
 			);
-			path = ModelView;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		343A743C24A7711700CA6CF2 /* Utilities */ = {
@@ -116,6 +122,8 @@
 				3442056224A8CF3800CC7E0E /* CCUIExtensions.swift */,
 				343A743D24A7713200CA6CF2 /* CCNetworkDataManager.swift */,
 				3442056824A9029A00CC7E0E /* CCCoreDataStack.swift */,
+				343B6BCF24AB606000266137 /* Constants.swift */,
+				343B6BD124AB620300266137 /* CCImageManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -131,10 +139,30 @@
 			path = CodeChallengeTests;
 			sourceTree = "<group>";
 		};
+		343F411724AB409D00AB0021 /* InitiateApp */ = {
+			isa = PBXGroup;
+			children = (
+				348DFFCA24A7487900D0231E /* AppDelegate.swift */,
+			);
+			path = InitiateApp;
+			sourceTree = "<group>";
+		};
+		343F413D24AB53E500AB0021 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				343B6BCD24AB5A1500266137 /* Assets.xcassets */,
+				348DFFD824A7487E00D0231E /* LaunchScreen.storyboard */,
+				348DFFDB24A7487E00D0231E /* Info.plist */,
+				348DFFD324A7487900D0231E /* CodeChallenge.xcdatamodeld */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		3442055A24A8CAA400CC7E0E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				348DFFE124A74A7500D0231E /* HomeScreenViewController.swift */,
+				348DFFE124A74A7500D0231E /* CCHomeScreenViewController.swift */,
+				343F411824AB4FF400AB0021 /* CCDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -142,7 +170,7 @@
 		3442055D24A8CB2300CC7E0E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3442055E24A8CB7A00CC7E0E /* DataItemTableViewCell.swift */,
+				3442055E24A8CB7A00CC7E0E /* CCDataItemTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -170,16 +198,13 @@
 		348DFFC924A7487900D0231E /* CodeChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				343F411724AB409D00AB0021 /* InitiateApp */,
 				3442055A24A8CAA400CC7E0E /* Controller */,
-				343A743C24A7711700CA6CF2 /* Utilities */,
-				343A743624A7620000CA6CF2 /* ModelView */,
-				3442055D24A8CB2300CC7E0E /* View */,
 				343A743124A75D7900CA6CF2 /* Model */,
-				348DFFCA24A7487900D0231E /* AppDelegate.swift */,
-				348DFFD624A7487E00D0231E /* Assets.xcassets */,
-				348DFFD824A7487E00D0231E /* LaunchScreen.storyboard */,
-				348DFFDB24A7487E00D0231E /* Info.plist */,
-				348DFFD324A7487900D0231E /* CodeChallenge.xcdatamodeld */,
+				3442055D24A8CB2300CC7E0E /* View */,
+				343A743624A7620000CA6CF2 /* ViewModel */,
+				343A743C24A7711700CA6CF2 /* Utilities */,
+				343F413D24AB53E500AB0021 /* Resources */,
 			);
 			path = CodeChallenge;
 			sourceTree = "<group>";
@@ -285,7 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				348DFFDA24A7487E00D0231E /* LaunchScreen.storyboard in Resources */,
-				348DFFD724A7487E00D0231E /* Assets.xcassets in Resources */,
+				343B6BCE24AB5A1500266137 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,17 +373,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				343F411924AB4FF400AB0021 /* CCDetailViewController.swift in Sources */,
 				3442056524A8D13100CC7E0E /* CCImageDownloader.swift in Sources */,
-				3442055F24A8CB7A00CC7E0E /* DataItemTableViewCell.swift in Sources */,
+				343B6BD224AB620300266137 /* CCImageManager.swift in Sources */,
+				3442055F24A8CB7A00CC7E0E /* CCDataItemTableViewCell.swift in Sources */,
 				343A743B24A770D600CA6CF2 /* ViewModel.swift in Sources */,
 				3442056924A9029A00CC7E0E /* CCCoreDataStack.swift in Sources */,
 				3442056724A8FEF900CC7E0E /* DataItem+CoreDataProperties.swift in Sources */,
-				3442056124A8CC4E00CC7E0E /* CellViewModel.swift in Sources */,
+				3442056124A8CC4E00CC7E0E /* CCCellViewModel.swift in Sources */,
 				343A743324A75DC100CA6CF2 /* DataItem+CoreDataClass.swift in Sources */,
 				343A743E24A7713200CA6CF2 /* CCNetworkDataManager.swift in Sources */,
+				343B6BD024AB606000266137 /* Constants.swift in Sources */,
 				348DFFD524A7487900D0231E /* CodeChallenge.xcdatamodeld in Sources */,
 				348DFFCB24A7487900D0231E /* AppDelegate.swift in Sources */,
-				348DFFE224A74A7500D0231E /* HomeScreenViewController.swift in Sources */,
+				348DFFE224A74A7500D0231E /* CCHomeScreenViewController.swift in Sources */,
 				3442056324A8CF3800CC7E0E /* CCUIExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -543,13 +571,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = CodeChallenge/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CodeChallenge/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Mobile.CodeChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -564,13 +594,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = CodeChallenge/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CodeChallenge/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Mobile.CodeChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

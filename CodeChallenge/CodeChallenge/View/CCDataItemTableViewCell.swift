@@ -1,5 +1,5 @@
 //
-//  DataItemTableViewCell.swift
+//  CCDataItemTableViewCell.swift
 //  CodeChallenge
 //
 //  Created by Pravin Ghogare on 28/06/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DataItemTableViewCell: UITableViewCell {
+class CCDataItemTableViewCell: UITableViewCell {
 
     // MARK: - Properties Initializer
     //Creates horizontal stack view
@@ -23,7 +23,7 @@ class DataItemTableViewCell: UITableViewCell {
     }()
     
     // view model
-    var imageCellViewModel = CellViewModel()
+    var imageCellViewModel = CCCellViewModel()
     
     var dataValue : DataItem? {
         didSet {

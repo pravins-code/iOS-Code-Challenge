@@ -9,7 +9,7 @@
 import Foundation
 import Reachability
 
-class MainViewModel {
+class CCMainViewModel {
     
     // MARK: - instance variables declaration
     private let url = "https://raw.githubusercontent.com/AxxessTech/Mobile-Projects/master/challenge.json"
@@ -58,11 +58,14 @@ class MainViewModel {
                 }
             })
         } else {
-            let _ = fetchData()
+            let data = fetchData()
+            if let loadCompletionBlock = self.readDataCompleted {
+                loadCompletionBlock(data != nil, nil)
+            }
         }
     }
     
-    func fetchData() -> Bool  {
+    func fetchData() -> Bool?  {
         let fetchRequest = DataItem.fetchDataRequest()
         let managedContext = CCCoreDataStack.context
         
